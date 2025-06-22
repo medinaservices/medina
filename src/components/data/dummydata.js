@@ -32,10 +32,10 @@ export const navlink = [
 ]
 export const home = [
   {
-    text: "HELLO I'M",
-    name: "ALAMIN MUSA",
-    post: "WEB DESIGNER",
-    design: "UI / UX DESIGNER",
+    text: "HI!",
+    name: "MEDINA SERVICES",
+    post: "LAWN SERVICES",
+    design: "HOME REMODELING",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
   },
 ]
@@ -43,7 +43,7 @@ export const about = [
   {
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
     desc1: "magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor si voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
-    cover: "./images/man.png",
+    cover: "./images/mower.jpg",
   },
 ]
 export const services = [
@@ -206,18 +206,16 @@ export const blog = [
 export const contact = [
   {
     icon: <AddLocationAltOutlined />,
-    text1: "2651 Main Street, Suit 124",
-    text2: "Seattle, WA, 98101",
+    text1: "3544 Finish Line Dr",
+    text2: "Gainesville VA, 20155",
   },
   {
     icon: <PhoneIphone />,
-    text1: "0123456789",
-    text2: "0345627891",
+    text1: "+15713953927",
   },
   {
     icon: <EmailOutlined />,
-    text1: "hello@thetheme.io",
-    text2: "inf0@brex-theme.io",
+    text1: "info@medinaservices.us",
   },
 ]
 export const social = [
