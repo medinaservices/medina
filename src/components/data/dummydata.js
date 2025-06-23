@@ -32,11 +32,11 @@ export const navlink = [
 ]
 export const home = [
   {
-    text: "HI!",
+    text: "",
     name: "MEDINA SERVICES",
     post: "LAWN SERVICES",
     design: "HOME REMODELING",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    desc: "Medina Services, LLC was established in May of 2016 as a minority owned small business to provide andscaping, building maintenance and construction services. Medina Services has experience providing dedicated and quality services to a variety of different customers.",
   },
 ]
 export const about = [
@@ -50,37 +50,73 @@ export const services = [
   {
     id: 1,
     icon: <Settings />,
-    title: "Creative Design",
+    title: "Mowing, trimming and edging",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
   {
     id: 2,
     icon: <CropRotate />,
-    title: "Clean Code",
+    title: "Weed control / fertilization",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
   {
     id: 3,
     icon: <ViewInAr />,
-    title: "Responsive Design",
+    title: "Tree trimming / replacement",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
   {
     id: 4,
     icon: <PieChart />,
-    title: "Material UI	",
+    title: "Shrub trimming / replacement",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
   {
     id: 5,
     icon: <Code />,
-    title: "Material UI Icons",
+    title: "Leaf and trash cleanup",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
   {
     id: 6,
     icon: <BarChart />,
-    title: "Awesome Support",
+    title: "Bed maintenance",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 7,
+    icon: <Settings />,
+    title: "Mulching",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 8,
+    icon: <CropRotate />,
+    title: "Landscaping Design and Service",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 9,
+    icon: <ViewInAr />,
+    title: "Retaining walls",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 4,
+    icon: <PieChart />,
+    title: "Fencing (new, repair and replacement)",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 5,
+    icon: <Code />,
+    title: "Power washing",
+    desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
+  },
+  {
+    id: 6,
+    icon: <BarChart />,
+    title: "Painting (Indoor / Outdoor)",
     desc: "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply",
   },
 ]
