@@ -1,6 +1,7 @@
 import React from "react"
 import { Heading } from "../common/Heading"
 import { contact } from "../data/dummydata"
+import ContactForm from "../home/ContactForm"
 
 export const Contact = () => {
   return (
@@ -28,6 +29,7 @@ export const Contact = () => {
                   <p>{item.text2}</p>
                 </div>
               ))}
+              <ContactForm/>
             </div>
           </div>
         </div>

@@ -10,9 +10,12 @@ export const Header = () => {
     <>
       <header>
         <div className='container flexsb'>
-          <div className='logo'>
-            <img src={logo} alt='' data-aos='zoom-in-right' />
-          </div>
+        <Link to="/">
+        <div className='logo'>
+            <img src={logo} alt='' data-aos='zoom-in-right' href='/'/>
+          </div>     
+           </Link>
+          
           <div className={responsive ? "hideMenu" : "nav"}>
             {navlink.map((links, i) => (
               <Link to={links.url} key={i} data-aos='zoom-in-left'>

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { home } from "../data/dummydata"
 import Typewriter from "typewriter-effect"
-import ContactForm from "./ContactForm"
 export const Hero = () => {
   return (
     <>
@@ -20,11 +19,11 @@ export const Hero = () => {
                 }}
               />
             </h1>
-            <p data-aos='fade-left'>{val.desc}</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZUh9UkY2Vt0LrNfYQfWP4FWsYfO3esT2Y18CCRYriBcsBcg/viewform" target="_blank" rel="noopener noreferrer">
+            <p className='subtext' data-aos='fade-left'>{val.desc}</p>
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZUh9UkY2Vt0LrNfYQfWP4FWsYfO3esT2Y18CCRYriBcsBcg/viewform" target="_blank" rel="noopener noreferrer">
   Fill Out Our Contact Form
 </a>
-            <ContactForm/>
+            <ContactForm/> */}
           </div>
         ))}
       </section>

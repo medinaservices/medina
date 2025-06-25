@@ -4,7 +4,7 @@ import { portfolio } from "../data/dummydata"
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined"
 
 const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))]
-export const Portfolio = () => {
+export const Services = () => {
   const [list, setLists] = useState(portfolio)
   const [category, setCategory] = useState(allCategory)
   console.log(setCategory)
@@ -22,7 +22,7 @@ export const Portfolio = () => {
     <>
       <article>
         <div className='container'>
-          <Heading title='Portfolio' />
+          <Heading title='Services' />
           <div className='catButton'>
             {category.map((category) => (
               <button className='primaryBtn' onClick={() => filterItems(category)} data-aos='zoom-out-down'>

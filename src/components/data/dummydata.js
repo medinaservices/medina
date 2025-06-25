@@ -5,18 +5,18 @@ export const navlink = [
     url: "/",
     text: "Home",
   },
-  {
-    url: "/about",
-    text: "About",
-  },
+  // {
+  //   url: "/about",
+  //   text: "About",
+  // },
   {
     url: "/services",
     text: "Services",
   },
-  {
-    url: "/portfolio",
-    text: "Portfolio",
-  },
+  // {
+  //   url: "/portfolio",
+  //   text: "Portfolio",
+  // },
   {
     url: "/testimonials",
     text: "Testimonials",
@@ -33,19 +33,19 @@ export const navlink = [
 export const home = [
   {
     text: "",
-    name: "MEDINA SERVICES",
+    name: "",
     post: "LAWN SERVICES",
     design: "HOME REMODELING",
     desc: "Medina Services, LLC was established in May of 2016 as a minority owned small business to provide andscaping, building maintenance and construction services. Medina Services has experience providing dedicated and quality services to a variety of different customers.",
   },
 ]
-export const about = [
-  {
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
-    desc1: "magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor si voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
-    cover: "./images/mower.jpg",
-  },
-]
+// export const about = [
+//   {
+//     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
+//     desc1: "magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor si voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
+//     // cover: "./images/mower.jpg",
+//   },
+// ]
 export const services = [
   {
     id: 1,
@@ -124,7 +124,7 @@ export const project = [
   {
     id: 1,
     icon: <CloudOutlined />,
-    num: "89",
+    num: "189",
     title: "HAPPY CLIENTS",
   },
   {
@@ -136,59 +136,38 @@ export const project = [
   {
     id: 3,
     icon: <Public />,
-    num: "108",
-    title: "FILES DOWNLOADED",
+    num: "10898",
+    title: "ACHERS MOWED ",
   },
   {
     id: 4,
     icon: <PersonOutlined />,
-    num: "1446",
-    title: "LIENS OF CODE",
+    num: "14986",
+    title: "DAYS OF WORK",
   },
 ]
 export const portfolio = [
   {
     id: 1,
     cover: "../images/port/port1.jpg",
-    name: "Brand",
-    category: "marketing",
-    title: "Brex Logo",
+    name: "Lawn",
+    category: "Lown",
+    title: "Lawn Services",
   },
   {
     id: 2,
     cover: "../images/port/port2.jpg",
-    name: "Brand",
-    category: "design",
-    title: "Brex Logo",
+    name: "Remodeling",
+    category: "Remodeling",
+    title: "Remodeling",
   },
   {
     id: 3,
     cover: "../images/port/port3.jpg",
-    name: "Brand",
-    category: "development",
-    title: "Brex Logo",
-  },
-  {
-    id: 4,
-    cover: "../images/port/port4.jpg",
-    name: "Brand",
-    category: "marketing",
-    title: "Brex Logo",
-  },
-  {
-    id: 5,
-    cover: "../images/port/port5.jpg",
-    name: "Brand",
-    category: "design",
-    title: "Brex Logo",
-  },
-  {
-    id: 6,
-    cover: "../images/port/port6.jpg",
-    name: "Brand",
-    category: "development",
-    title: "Brex Logo",
-  },
+    name: "Tree",
+    category: "Tree Services",
+    title: "Tree Services",
+  }
 ]
 export const testimonials = [
   {

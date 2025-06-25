@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryBackground: #212222;
-  --secondaryBackground: #2f3030;
-  --primaryColor: #e0a80d;
+  --primaryBackground: green;
+  --secondaryBackground: green;
+  --primaryColor: green;
   --greyDark: #7d8792;
-  --headingColor: #2d2e2e;
+  --headingColor: grid-template-columns;
   --white: #fff;
-  --black: #000;
+  --black: green;
   --sliver: #bac8d3;
 }
 body {
@@ -71,7 +71,7 @@ button {
 /*---------header-------------*/
 header {
   background-color: var(--headingColor);
-  height: 10vh;
+  height: 15vh;
   line-height: 10vh;
   position: sticky;
   top: 0;
@@ -129,7 +129,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../public/images/home-bg.png");
+  background-image: url("../public/images/home-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
@@ -264,6 +264,7 @@ article .box:hover .overlay {
 .catButton button {
   text-transform: capitalize;
   margin-right: 20px;
+  color: green;
 }
 /*---------portfolio-------------*/
 /*---------testimonials-------------*/
@@ -365,7 +366,7 @@ footer i {
   }
 
   .hero::after {
-    background-image: url("../public/images/home-bg.png");
+    background-image: url("../public/images/home-bg.jpg");
     background-size: cover;
     object-fit: cover;
     width: 100%;
@@ -393,8 +394,17 @@ footer i {
   }
 }
 .logo img {
-  max-height: 60px; /* Adjust as needed */
+  max-height: 100px; /* Adjust as needed */
   height: auto;
   width: auto;
   margin-top: 8px;
+}
+
+.subtext,.heroContent{
+  background-color: white;
+  color: green;
+  border-radius: 16px; /* <-- this is the corner radius */
+  padding: 1.5rem;
+
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
