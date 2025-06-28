@@ -1,39 +1,72 @@
-import React from "react"
-import { Heading } from "../common/Heading"
-import { contact } from "../data/dummydata"
-import ContactForm from "../home/ContactForm"
+import { useState } from "react";
+import "./Contact.css";
 
-export const Contact = () => {
+export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // 👉 TODO: Replace this with actual form submission (e.g. fetch to API)
+    console.log("Submitted data:", formData);
+    setSubmitted(true);
+
+    // Clear the form
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
-    <>
-      <div className='contact'>
-        <div className='container'>
-          <Heading title='Keep In Touch' />
-          <div className='content flexsb'>
-            <div className='right'>
-              <form>
-                <div className='flex'>
-                  <input type='text' placeholder='Name' data-aos='flip-left' />
-                  <input type='email' placeholder='Email' data-aos='flip-right' />
-                </div>
-                <input type='email' placeholder='Subject' data-aos='flip-up' />
-                <textarea name='' id='' cols='30' rows='10' data-aos='flip-down'></textarea>
-                <button data-aos='zoom-in-up'>Submit</button>
-              </form>
-            </div>
-            <div className='left'>
-              {contact.map((item) => (
-                <div className='box' data-aos='zoom-in'>
-                  <i>{item.icon}</i>
-                  <p>{item.text1}</p>
-                  <p>{item.text2}</p>
-                </div>
-              ))}
-              <ContactForm/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+    <div className="contact-form-container">
+      <h2>Contact Us</h2>
+      {submitted && <p className="success-message">Thank you! We'll get back to you soon.</p>}
+      <form onSubmit={handleSubmit} className="contact-form">
+        <label>
+          Name:
+          <input
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            type="text"
+            placeholder="Your name"
+          />
+        </label>
+
+        <label>
+          Email:
+          <input
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            type="email"
+            placeholder="you@example.com"
+          />
+        </label>
+
+        <label>
+          Message:
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows={5}
+            placeholder="How can we help you?"
+          ></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  );
 }

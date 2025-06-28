@@ -175,21 +175,21 @@ export const testimonials = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
     image: "./images/testimonials/team-1.png",
     name: "Alamin Musa",
-    post: "Front End Developer",
+    post: "Customer",
   },
   {
     id: 2,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
     image: "./images/testimonials/team-2.png",
     name: "Alex Ander",
-    post: "Back End Developer",
+    post: "Customer 2",
   },
   {
     id: 3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
     image: "./images/testimonials/team-3.png",
     name: "GorkCoder",
-    post: "React Developer",
+    post: "Customer 3",
   },
 ]
 export const blog = [

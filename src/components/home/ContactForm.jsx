@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Phone, Send } from "lucide-react";
 
 const ContactForm = () => {
   const [showForm, setShowForm] = useState(false);
@@ -8,8 +9,6 @@ const ContactForm = () => {
 
   return (
     <div>
-      <button onClick={handleClick}>GET QUOTE </button>
-
       {showForm && (
         <div
           style={{
@@ -23,14 +22,13 @@ const ContactForm = () => {
           }}
         >
           <div style={{ backgroundColor: "#fff", padding: 20, width: "90%", maxWidth: 600 }}>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfZUh9UkY2Vt0LrNfYQfWP4FWsYfO3esT2Y18CCRYriBcsBcg/viewform?embedded=true" 
-              height="500"
-              frameBorder="0"
-              title="Google Form"
-            >
-              Loading…
-            </iframe>
+          <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfZUh9UkY2Vt0LrNfYQfWP4FWsYfO3esT2Y18CCRYriBcsBcg/viewform"
+          className="quote-button"
+        >
+          <Send size={16} className="icon" />
+          Get Quote
+        </a>
             <button onClick={handleClose} style={{ marginTop: 10 }}>Close</button>
           </div>
         </div>

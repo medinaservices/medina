@@ -3,13 +3,14 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { navlink } from "../data/dummydata"
 import logo from "../data/images/medina-logo.png"
+import "./Header.css";
 
 export const Header = () => {
   const [responsive, setResponsive] = useState(false)
   return (
     <>
       <header>
-        <div className='container flexsb'>
+        <div className='flexsb'>
         <Link to="/">
         <div className='logo'>
             <img src={logo} alt='' data-aos='zoom-in-right' href='/'/>

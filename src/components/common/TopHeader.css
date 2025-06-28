@@ -45,3 +45,66 @@
 .header-right .quote-button:hover {
   background-color: #005bb5;
 }
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 16px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-left .divider {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+.quote-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.quote-button:hover {
+  background-color: #0056b3;
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .top-header {
+    flex-direction: column;
+    align-items:center;
+    gap: 0px;
+  }
+
+  .header-right {
+    flex-direction: row;
+    justify-content:center;
+    width: 100%;
+  }
+
+  .header-left {
+    display: none;
+  }
+}

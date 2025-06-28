@@ -44,6 +44,16 @@ h6 {
 .container {
   max-width: 80%;
   margin: auto;
+
+  h2{
+    margin-bottom: 0px;
+  }
+}
+.services{
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+  }
+
 }
 .flexsb {
   display: flex;
@@ -87,6 +97,10 @@ header a {
   color: var(--white);
   display: none;
 }
+.nav{
+  margin-right: 20px;
+
+}
 @media screen and (max-width: 768px) {
   header .nav {
     display: none;
@@ -108,6 +122,16 @@ header a {
     left: 0;
     width: 100%;
     background-color: var(--headingColor);
+    @media (max-width: 600px) {
+      /* display: flex;
+      flex-direction: column;
+      font-size: larger;
+      gap: 12px; /* 👈 This gives even spacing between elements */
+      /* flex-wrap: wrap;
+    line-height: 10px;
+    margin-top: 20px; */ 
+    display:none;
+    }
   }
 }
 /*---------header-------------*/
@@ -131,7 +155,7 @@ section {
   left: 0;
   background-image: url("../public/images/home-bg.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment:static;
   z-index: -1;
   width: 100%;
   height: 90vh;
@@ -199,7 +223,12 @@ section {
 
 /*---------counter-------------*/
 .counter {
-  margin-top: 80px;
+  @media (max-width: 600px) {
+ 
+
+    display: none;
+  
+}
   position: relative;
 }
 .hero.counter::after {
@@ -257,9 +286,17 @@ article .box:hover .overlay {
 }
 .catButton {
   display: flex;
+  @media (max-width: 600px) {
+ 
+flex-direction: column;
+
+margin-top: 60px;
+
+}
   justify-content: center;
   align-items: center;
   margin: 40px 0;
+  margin-top: 10px;
 }
 .catButton button {
   text-transform: capitalize;
@@ -312,6 +349,14 @@ label {
 }
 /*---------testimonials-------------*/
 /*---------blog-------------*/
+.blog{
+  @media (max-width: 600px) {
+ 
+
+    display: none;
+  
+}
+}
 .blog img {
   width: 100%;
 }
@@ -349,11 +394,14 @@ label {
 footer {
   text-align: center;
   background-color: var(--primaryBackground);
-  padding: 70px;
-  margin-top: 50px;
+  padding: 10px;
+  a{
+    color: white;
+
+  }
 }
-footer i {
-  margin: 5px;
+footer i,a {
+  margin: 0px;
   color: var(--primaryColor);
 }
 /*---------footer-------------*/
@@ -405,6 +453,15 @@ footer i {
   color: green;
   border-radius: 16px; /* <-- this is the corner radius */
   padding: 1.5rem;
-
+margin-bottom: 40px;
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+
+  /* Responsive styles */
+@media (max-width: 600px) {
+ 
+
+    /* display: none; */
+  
 }
+}
+
