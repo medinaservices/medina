@@ -166,7 +166,7 @@ section {
   text-align: center;
 }
 .hero h1 {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--primaryColor);
 }

@@ -7,6 +7,7 @@ import { Counter } from "../pages/Counter"
 import { Services } from "../pages/Services2"
 import { Testimonials } from "../pages/Testimonials"
 import { Hero } from "./Hero"
+import PaypalPayment from "../pages/PaypalPayment"
 
 export const Home = () => {
   return (
@@ -15,10 +16,10 @@ export const Home = () => {
       {/* <About /> */}
       <Services />
       <Counter />
-      {/* <Portfolio /> */}
       <Testimonials />
       <Blog />
       <Contact />
+      <PaypalPayment />
     </>
   )
 }

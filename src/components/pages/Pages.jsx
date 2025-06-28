@@ -10,6 +10,7 @@ import { Contact } from "./Contact"
 // import { Portfolio } from "./Portfolio"
 import { Services } from "./Services2"
 import { Testimonials } from "./Testimonials"
+import PaypalPayment from "./PaypalPayment"
 export const Pages = () => {
   return (
     <>
@@ -20,7 +21,7 @@ export const Pages = () => {
           <Route exact path='/' component={Home} />
           {/* <Route exact path='/about' component={About} /> */}
           <Route exact path='/services' component={Services} />
-          {/* <Route exact path='/portfolio' component={Portfolio} /> */}
+          <Route exact path='/paypal' component={PaypalPayment} />
           <Route exact path='/testimonials' component={Testimonials} />
           <Route exact path='/blog' component={Blog} />
           <Route exact path='/contact' component={Contact} />
