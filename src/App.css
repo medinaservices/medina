@@ -619,7 +619,7 @@ html {
     position: fixed;
     top: 126px; /* Height of both bars */
     left: -100%;
-    width: 100%;
+    width: 90%;
     height: calc(100vh - 126px);
     background: white;
     flex-direction: column;
