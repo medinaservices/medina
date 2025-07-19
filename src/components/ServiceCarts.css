@@ -1,0 +1,282 @@
+.service-carts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.carts-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 280px;
+  /* max-width: 350px; */
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border-top: 4px solid var(--service-color);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  /* font-size: 2.5rem; */
+  margin-bottom: 1rem;
+  color: var(--service-color);
+}
+
+.service-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.view-services-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--service-color);
+  font-weight: 600;
+}
+
+.service-details-container {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.service-details-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-details-title h3 {
+  color: #333;
+  margin-top: -5px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1 1 calc(50% - 8px); /* Two items per row with gap */
+  /* border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden; */
+}
+
+.service-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 3px solid var(--service-color);
+}
+
+.service-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-item h4 {
+  color: #333;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.service-description {
+  color: #555;
+  margin: 0.5rem 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.service-price {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: var(--service-color);
+}
+
+@media (max-width: 768px) {
+  .service-carts-container {
+    padding: 1rem;
+  }
+
+  .service-card {
+    min-width: 100%;
+  }
+}
+/* Breadcrumb Navigation Styles */
+.breadcrumb-nav {
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.breadcrumb-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-nav a {
+  color: #5d9cec;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: #3a7bc8;
+  text-decoration: underline;
+}
+
+.breadcrumb-nav .active {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.breadcrumb-chevron {
+  color: #bdc3c7;
+  font-size: 0.7rem;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-nav {
+    font-size: 0.8rem;
+  }
+
+  .breadcrumb-chevron {
+    margin: 0 0.3rem;
+  }
+}
+.breadcrumb-nav {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem; /* Increased from 0.9rem */
+  }
+  
+  .breadcrumb-nav ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .breadcrumb-nav li {
+    display: flex;
+    align-items: center;
+    font-weight: 600; /* Added bold */
+  }
+  
+  .breadcrumb-nav a {
+    color: green;
+    text-decoration: none;
+    font-weight: 600; /* Added bold */
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb-nav a:hover {
+    color: green;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-nav .active {
+    color: #202124; /* Darker color for better contrast */
+    font-weight: 700; /* Even bolder for current page */
+  }
+  
+  .breadcrumb-chevron {
+    color: #5f6368;
+    margin: 0 8px; /* Slightly more spacing */
+    font-size: 0.8rem; /* Slightly larger chevrons */
+  }
+
+.service-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-width: 35em;
+}
+
+.service-details {
+  margin-top: 2rem;
+}
+
+.service-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+  .service-logo {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }

@@ -1,9 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FaPaperPlane, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css'; // Create this new CSS file
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -65,6 +81,7 @@ export default function Contact() {
                 name="name" 
                 placeholder="John Smith" 
                 required 
+                onChange={handleChange}
               />
             </div>
             
@@ -76,6 +93,7 @@ export default function Contact() {
                 name="email" 
                 placeholder="john@example.com" 
                 required 
+                onChange={handleChange}
               />
             </div>
             
@@ -87,6 +105,7 @@ export default function Contact() {
                 placeholder="How can we help you?" 
                 rows="5" 
                 required
+                onChange={handleChange}
               ></textarea>
             </div>
             
@@ -104,48 +123,3 @@ export default function Contact() {
     </section>
   );
 }
-
-// import React from 'react';
-
-
-// export default function Contact() {
-//     const [result, setResult] = React.useState("");
-  
-//     const onSubmit = async (event) => {
-//       event.preventDefault();
-//       setResult("Sending....");
-//       const formData = new FormData(event.target);
-  
-//       formData.append("access_key", "effecd1a-3484-4f8b-8770-645fee5ecf86");
-  
-//       const response = await fetch("https://api.web3forms.com/submit", {
-//         method: "POST",
-//         body: formData
-//       });
-  
-//       const data = await response.json();
-  
-//       if (data.success) {
-//         setResult("Form Submitted Successfully");
-//         event.target.reset();
-//       } else {
-//         console.log("Error", data);
-//         setResult(data.message);
-//       }
-//     };
-  
-//     return (
-//       <div>
-//         <form onSubmit={onSubmit}>
-//           <input type="text" name="name" required/>
-//           <input type="email" name="email" required/>
-//           <textarea name="message" required></textarea>
-  
-//           <button type="submit">Submit Form</button>
-  
-//         </form>
-//         <span>{result}</span>
-  
-//       </div>
-//     );
-//   }

@@ -1,0 +1,151 @@
+.services-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .page-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--service-color);
+  }
+  
+  .page-icon {
+    font-size: 2rem;
+    color: var(--service-color);
+  }
+  
+  .services-page h1 {
+    color: #333;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .service-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-top: 4px solid var(--service-color);
+  }
+  
+  .service-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  
+  .service-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .check-icon {
+    color: var(--service-color);
+    font-size: 1rem;
+  }
+  
+  .service-item h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .service-price {
+    font-weight: 600;
+    color: var(--service-color);
+    font-size: 1.1rem;
+  }
+  
+  .service-description {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    padding-left: 1.8rem;
+  }
+  
+  .service-details {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .service-details h4 {
+    color: var(--service-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .service-details li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .service-details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--service-color);
+    border-radius: 50%;
+  }
+  
+  .contact-button {
+    background-color: var(--service-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .contact-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .not-found {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  @media (max-width: 600px) {
+    .service-item-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .service-price {
+      padding-left: 1.8rem;
+    }
+  }

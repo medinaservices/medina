@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function AboutPreview() {
   return (
     <div className="about-preview">
-      <div className="container">
+      <div className="about-preview-container">
         <h2>Why Choose Medina Services?</h2>
         <p>
           With over 10 years of experience, we combine expertise with passion to deliver 
