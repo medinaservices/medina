@@ -99,16 +99,3 @@ function Navbar({ onGetQuoteClick }) {
 }
 
 export default Navbar;
-
-
- 
-// return (
-//   <nav className="navbar">
-//     {/* ... other nav items ... */}
-//     <li className="nav-item">
-//       <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>
-//         Contact
-//       </Link>
-//     </li>
-//   </nav>
-// );

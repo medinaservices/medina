@@ -42,7 +42,8 @@ const ServiceCarts = () => {
 
       {/* <h2 className="section-title">Our Services</h2> */}
       <img className="service-logo" src="/images/logo.png"/>
-      <h2 className="section-subtitle">Click below on a service to view offerings</h2>
+      <h1 className="section-title">We are full of home service company</h1>
+      <h5 className="section-subtitle">Click below on a service to view offerings</h5>
 
       <div className="carts-wrapper">
         {services.map((service) => (

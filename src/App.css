@@ -67,6 +67,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-decoration: none !important;
 }
 
 .service-card:hover {
@@ -158,9 +159,6 @@ body {
   cursor: pointer;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
 
 .form-group label {
   display: block;
@@ -192,6 +190,7 @@ body {
   cursor: pointer;
   width: 100%;
   transition: background 0.3s;
+  margin-top: 20px;
 }
 
 .submit-button:hover {
@@ -533,18 +532,19 @@ html {
 }
 
 .top-quote-button {
-  background: transparent;
+  background: green;
   color: white;
   border: 1px solid white;
   padding: 5px 15px;
   border-radius: 20px;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .top-quote-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: greenyellow;
+  color: black;
 }
 
 /* Updated Navbar Styles */
@@ -964,7 +964,7 @@ html {
 }
 
 .quote-form-wrapper {
-  max-width: 700px; /* Increased from 600px */
+  max-width: 500px; /* Increased from 600px */
 }
 
 .quote-form-container {
@@ -1013,6 +1013,8 @@ html {
   padding: 30px;
   transition: all 0.3s ease;
   border: 1px solid #eaeaea;
+  text-decoration: none !important;
+
 }
 
 .service-card:hover {
@@ -1040,7 +1042,7 @@ html {
 .service-card h3 {
   color: #2a7a2f;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
 
 /* Responsive Design */

@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import { useParams, Link } from "react-router-dom";
+import QuoteForm from "./QuoteForm";
 import {
   FaCut,
   FaHome,
@@ -14,12 +15,13 @@ import {
   FaSprayCan,
   FaBorderNone,
   FaChevronDown,
-  FaChevronRight
+  FaTools
 } from "react-icons/fa";
 import "./ServiceCarts.css";
 
 const ServicePage = () => {
   const { serviceId } = useParams();
+  const [showQuoteForm, setShowQuoteForm] = useState(false);
 
   const servicesData = {
         1: {
@@ -95,6 +97,26 @@ const ServicePage = () => {
                 description: "Professional painting services for all surfaces",
                 icon: <FaPaintRoller className="service-icon" />,
               },
+              {
+                title: "Additions",
+                description: "Expand your living space with expertly designed home additions.",
+                icon: <FaTools className="service-icon" />,
+              },
+              {
+                title: "Floor Installations",
+                description: "Expert installation of hardwood, tile, and laminate flooring.",
+                icon: <FaHome className="service-icon" />,
+              },
+              {
+                title: "Basement Remodeling",
+                description: "Transform your basement into a functional and beautiful living space.",
+                icon: <FaSprayCan className="service-icon" />,
+              },
+              {
+                title: "Carpet Installations",
+                description: "Professional carpet installation with precise fitting and finishing.",
+                icon: <FaPaintRoller className="service-icon" />,
+              },
             ]
         }
       };
@@ -108,6 +130,8 @@ const ServicePage = () => {
 
   return (
     <div className="service-page-container">
+              {showQuoteForm && <QuoteForm onClose={() => setShowQuoteForm(false)} />}
+
       <nav className="breadcrumb-nav">
         <ol>
           <li>
@@ -138,6 +162,9 @@ const ServicePage = () => {
             </div>
           ))}
         </div>
+        <button className="top-quote-button" onClick={() => setShowQuoteForm(true)}>
+            Get a Free Quote
+          </button>
       </div>
     </div>
   );

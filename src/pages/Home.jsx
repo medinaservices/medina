@@ -28,11 +28,6 @@ function Home({ onGetQuoteClick }) {
       <section id="about-preview">
         <AboutPreview />
       </section>
-{/*       
-      Optional CTA Section
-      <section id="cta">
-        <CallToAction onGetQuoteClick={onGetQuoteClick} />
-      </section> */}
     </main>
   );
 }
