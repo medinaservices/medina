@@ -7,7 +7,7 @@ function Footer() {
 
   // Add to your icons
   <a
-    href="https://facebook.com/yourpage"
+    href="https://www.facebook.com/MedinaServicesLLC/"
     onMouseEnter={() => setTooltip("Follow us on Facebook")}
     onMouseLeave={() => setTooltip("")}
   >
@@ -28,21 +28,21 @@ function Footer() {
           <p>Phone: (571) 395-3927</p>
           <div className="social-icons">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://www.facebook.com/MedinaServicesLLC/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook className="social-icon" />
             </a>
             <a
-              href="https://instagram.com/yourpage"
+              href="https://instagram.com/MedinaServicesLLC"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram className="social-icon" />
             </a>
             <a
-              href="https://g.page/your-business"
+              href="https://g.page/MedinaServicesLLC"
               target="_blank"
               rel="noopener noreferrer"
             >
