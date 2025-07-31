@@ -5,8 +5,8 @@ function Header({ onGetQuoteClick }) {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Professional Lawn Care Services</h1>
-        <p>Beautiful lawns start with our expert care</p>
+        <h1>Professional Home and Lawn Care Services</h1>
+        {/* <p>Beautiful lawns start with our expert care</p> */}
         <button className="cta-button" onClick={onGetQuoteClick}>
           Get a Free Quote
         </button>

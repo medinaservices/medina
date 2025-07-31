@@ -129,11 +129,8 @@ return (
               onChange={handleChange}
             >
               <option value="">Select a service</option>
-              <option value="mowing">Lawn Mowing</option>
-              <option value="fertilization">Fertilization</option>
-              <option value="weed-control">Weed Control</option>
-              <option value="aeration">Aeration</option>
-              <option value="full-care">Full Lawn Care Package</option>
+              <option value="mowing">Lawn Services</option>
+              <option value="fertilization">Home Services</option>
             </select>
           </div>
           <div className="form-group">
