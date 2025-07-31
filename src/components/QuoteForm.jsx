@@ -26,7 +26,7 @@ function QuoteForm({ onClose }) {
     setResult("Sending....");
     const formData = new FormData(e.target); // Use e.target instead of event.target
 
-    formData.append("access_key", process.env.EMAIL);
+    formData.append("access_key", "effecd1a-3484-4f8b--645fee5ecf86");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
