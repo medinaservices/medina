@@ -14,7 +14,7 @@
   }
   
   .contact-info h2 {
-    color: #2a7a2f;
+    color: #08518a;
     font-size: 2rem;
     margin-bottom: 20px;
   }
@@ -38,7 +38,7 @@
   }
   
   .contact-icon {
-    color: #4CAF50;
+    color: #08518a;
     font-size: 1.2rem;
   }
   
@@ -79,11 +79,11 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: #08518a;
   }
   
   .submit-button {
-    background: #4CAF50;
+    background: #08518a;
     color: white;
     border: none;
     padding: 14px 25px;
@@ -99,7 +99,7 @@
   }
   
   .submit-button:hover {
-    background: #3e8e41;
+    background: #08518a;
     transform: translateY(-2px);
   }
   

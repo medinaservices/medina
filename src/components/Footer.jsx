@@ -25,7 +25,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>Email: info@medinaservices.us</p>
-          <p>Phone: (571) 395-3927</p>
+          <p>Phone: (571) 395-3928</p>
           <div className="social-icons">
             <a
               href="https://www.facebook.com/MedinaServicesLLC/"
@@ -68,7 +68,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Professional Lawn Care. All rights
+          &copy; {new Date().getFullYear()} Medina Services LLC - All rights
           reserved.
         </p>
       </div>

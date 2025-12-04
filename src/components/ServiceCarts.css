@@ -234,14 +234,14 @@
   }
   
   .breadcrumb-nav a {
-    color: green;
+    color: #08518a;
     text-decoration: none;
     font-weight: 600; /* Added bold */
     transition: color 0.2s ease;
   }
   
   .breadcrumb-nav a:hover {
-    color: green;
+    color: navy;
     text-decoration: underline;
   }
   

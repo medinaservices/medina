@@ -48,8 +48,8 @@ function QuoteForm({ onClose }) {
 // In your QuoteForm.jsx, update the submitted state return:
 if (submitted) {
   return (
-    <div className="quote-form-overlay">
-      <div className="quote-form submitted">
+    <div className="Quote-form-overlay">
+      <div className="Quote-form submitted">
         <div className="success-animation">
           <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
             <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -57,7 +57,7 @@ if (submitted) {
           </svg>
         </div>
         <h2 className="thank-you-title">Thank You!</h2>
-        <p className="thank-you-message">We've received your request and will contact you shortly with a quote.</p>
+        <p className="thank-you-message">We've received your request and will contact you shortly with a Quote.</p>
         <button 
           onClick={onClose} 
           className="thank-you-close-button"
@@ -70,13 +70,13 @@ if (submitted) {
 }
 
 return (
-  <div className="quote-form-overlay">
-    <div className="quote-form-wrapper">
-      <div className="quote-form-container">
+  <div className="Quote-form-overlay">
+    <div className="Quote-form-wrapper">
+      <div className="Quote-form-container">
         <button className="close-button" onClick={onClose}>
           ×
         </button>
-        <h2>Get a Free Quote</h2>
+        <h2>Get a Free Estimate</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>

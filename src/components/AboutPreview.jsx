@@ -6,11 +6,11 @@ function AboutPreview() {
     <div className="about-preview">
       <div className="about-preview-container">
         <h2>Why Choose Medina Services?</h2>
-        <p>
-          With over 10 years of experience, we combine expertise with passion to deliver 
-          exceptional lawn care services. Our eco-friendly approach ensures beautiful 
-          results that last.
-        </p>
+      <h4>Family-Owned & Local</h4>
+  <h4>Quality Work You Can Count On</h4>
+  <h4>Honest, Upfront Pricing</h4>
+  <h4>Residential + Commercial
+  Experienc</h4>
         <Link to="/about" className="cta-button">
           Learn More About Us
         </Link>

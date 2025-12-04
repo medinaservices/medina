@@ -19,7 +19,7 @@ import {
 } from "react-icons/fa";
 import "./ServiceCarts.css";
 
-const ServicePage = () => {
+const Whyus = () => {
   const { serviceId } = useParams();
   const [showQuoteForm, setShowQuoteForm] = useState(false);
 
@@ -169,4 +169,4 @@ const ServicePage = () => {
     </div>
   );
 };
-export default ServicePage;
+export default Whyus;

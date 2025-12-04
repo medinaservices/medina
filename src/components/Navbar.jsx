@@ -30,10 +30,10 @@ function Navbar({ onGetQuoteClick }) {
         <div className="container">
           <div className="contact-info">
             <FaPhone className="contact-icon" />
-            <span>(571) 395-3927</span>
+            <span>(571) 395-3928</span>
           </div>
-          <button className="top-quote-button" onClick={onGetQuoteClick}>
-            Get a Free Quote
+          <button className="top-Quote-button" onClick={onGetQuoteClick}>
+            Get a Free Estimate
           </button>
         </div>
       </div>

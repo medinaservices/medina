@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import Services from '../components/ServiceCarts';
 import Testimonials from '../components/Testimonials';
 import AboutPreview from '../components/AboutPreview'; // Optional section
@@ -11,7 +10,7 @@ function Home({ onGetQuoteClick }) {
   return (
     <main className="home-page">
       {/* Hero Section */}
-      <Header onGetQuoteClick={onGetQuoteClick} />
+      {/* <Header onGetQuoteClick={onGetQuoteClick} /> */}
       
   
       {/* Services Preview */}

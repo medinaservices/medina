@@ -1,33 +1,47 @@
 // ServiceCarts.jsx
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import {
   FaHome,
   FaChevronRight,
-  FaLeaf
+  FaLeaf,
+  FaTools
 } from "react-icons/fa";
 import "./ServiceCarts.css";
+import QuoteForm from "./QuoteForm";
+
 
 const ServiceCarts = () => {
+
+  const [showQuoteForm, setShowQuoteForm] = useState(false);
+
   const services = [
     {
       id: 1,
-      title: "Lawn Service",
-      description: "Professional lawn care and maintenance",
+      title: "Commercial and Residential Grounds Maintenance",
+      description: "Routine lawn mowing, mulching, shrub trimim: leaf removal, weed control, and more.",
       icon: <FaLeaf className="service-icon" size={64}/>, 
-      color: "#4CAF50"
+      color: "#08518a"
     },
     {
       id: 2,
-      title: "Home Remodeling",
-      description: "Transform your living space",
+      title: "Home Repair Services",
+      description: "Interior and exterior repairs, including carpentry, painting, drywall, and more.",
+      icon: <FaTools className="service-icon" size={64}/>,
+      color: "#08518a"
+    }, {
+      id: 3,
+      title: "General Contracting and Remodeling",
+      description: "Complete home addition's, kitchen and bathroom remodels, and more.",
       icon: <FaHome className="service-icon" size={64}/>,
-      color: "#607D8B"
+      color: "#08518a"
     }
   ];
 
   return (
     <div className="service-carts-container">
+                    {showQuoteForm && <QuoteForm onClose={() => setShowQuoteForm(false)} />}
+
       <nav className="breadcrumb-nav">
         <ol>
           <li>
@@ -41,9 +55,33 @@ const ServiceCarts = () => {
       </nav>
 
       {/* <h2 className="section-title">Our Services</h2> */}
-      <img className="service-logo" src="/images/logo.png"/>
-      <h1 className="section-title">We are full of home service company</h1>
-      <h5 className="section-subtitle">Click below on a service to view offerings</h5>
+
+      <div className="logos">
+        <div>
+      
+        </div>
+        <div className="item1">
+        <img
+              src="/images/logo.png"
+              alt="Medina Services Logo"
+              className="logo-image2"
+            />
+        <h1 className="item-title">Honest, Reliable, Family-Owned</h1>
+        <h5 className="section-subtitle">Providing quality landscaping, power
+washing, and exterior services
+since 2016.</h5>
+
+<button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
+            Get a Free Estimate
+          </button>
+
+        </div>
+        <div className="item2">
+        <img  src="/images/about.jpg"/>
+
+        </div>
+      </div>
+  
 
       <div className="carts-wrapper">
         {services.map((service) => (

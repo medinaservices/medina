@@ -11,6 +11,7 @@ import Testimonials from "./components/Testimonials";
 import ServiceCarts from "./components/ServiceCarts";
 import ServicePage from "./components/ServicePage"
 import "./App.css";
+import Whyus from "./components/Whyus";
 
 function App() {
   const [showQuoteForm, setShowQuoteForm] = useState(false);
@@ -31,6 +32,7 @@ function App() {
             }
           />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/whyus" element={<Whyus />} />
           <Route path="/services" element={<ServiceCarts />} />
           <Route path="/services/:serviceId" element={<ServicePage />} />
           <Route path="/testimonials" element={<Testimonials />} />

@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="contact-details">
             <div className="contact-item">
               <FaPhone className="contact-icon" />
-              <span> (571) 395-3927</span>
+              <span> (571) 395-3928</span>
             </div>
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
