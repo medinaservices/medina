@@ -114,16 +114,21 @@
   flex-direction: column;
   gap: 1.5rem;
   flex: 1 1 calc(50% - 8px); /* Two items per row with gap */
+  margin-bottom: 2rem;
   /* border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden; */
 }
 
 .service-item {
+  display: flex;
+  flex-direction: row;
   background: #f9f9f9;
   border-radius: 8px;
-  padding: 1.5rem;
   border-left: 3px solid var(--service-color);
+  h3{
+    margin-left: 2rem;
+  }
 }
 
 .service-item-header {

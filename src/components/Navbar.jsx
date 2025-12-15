@@ -73,6 +73,17 @@ function Navbar({ onGetQuoteClick }) {
                 Testimonials
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link
+                to="/whychooseus"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+              Why Choose Us
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link
                 to="/about"

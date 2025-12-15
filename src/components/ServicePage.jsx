@@ -2,21 +2,34 @@ import React,{useState} from "react";
 import { useParams, Link } from "react-router-dom";
 import QuoteForm from "./QuoteForm";
 import {
-  FaCut,
-  FaHome,
-  FaTree,
   FaLeaf,
+  FaCut,
   FaBroom,
   FaSeedling,
-  FaLayerGroup,
-  FaPaintRoller,
+  FaTree,
+  FaTrash,
+  FaSnowplow,
+  FaLightbulb,
   FaWater,
-  FaRulerCombined,
   FaSprayCan,
-  FaBorderNone,
-  FaChevronDown,
-  FaTools
+  FaTools,
+  FaHammer,
+  FaPaintRoller,
+  FaCouch,
+  FaTv,
+  FaDoorOpen,
+  FaFan,
+  FaBath,
+  FaThLarge,
+  FaHome,
+  FaBuilding,
+  FaProjectDiagram,
+  FaLayerGroup,
+  FaBorderAll,
+  FaChevronDown
 } from "react-icons/fa";
+
+
 import "./ServiceCarts.css";
 
 const ServicePage = () => {
@@ -24,102 +37,66 @@ const ServicePage = () => {
   const [showQuoteForm, setShowQuoteForm] = useState(false);
 
   const servicesData = {
-        1: {
-          title: "Lawn Service" ,
-          icon: <FaLeaf className="service-icon" />,
-          color: "#4CAF50",
-          services:   [
-              {
-                title: "Mowing, Trimming & Edging",
-                description:
-                  "Professional cutting services for a perfectly manicured lawn",
-                icon: <FaCut className="service-icon" />,
-              },
-              {
-                title: "Weed Control & Fertilization",
-                description: "Customized treatments for healthy, weed-free grass",
-                icon: <FaSprayCan className="service-icon" />,
-              },
-              {
-                title: "Tree Trimming & Replacement",
-                description: "Expert tree care and replacement services",
-                icon: <FaTree className="service-icon" />,
-              },
-              {
-                title: "Shrub Trimming & Replacement",
-                description: "Shaping and maintaining your landscape shrubs",
-                icon: <FaLeaf className="service-icon" />,
-              },
-              {
-                title: "Leaf & Trash Cleanup",
-                description: "Complete yard waste removal services",
-                icon: <FaBroom className="service-icon" />,
-              },
-              {
-                title: "Bed Maintenance",
-                description: "Flower bed care and seasonal preparation",
-                icon: <FaSeedling className="service-icon" />,
-              },
-              {
-                title: "Mulching",
-                description: "Premium mulch installation for healthy plants",
-                icon: <FaLayerGroup className="service-icon" />,
-              },
-              {
-                title: "Landscaping Design & Service",
-                description: "Custom landscape design and installation",
-                icon: <FaRulerCombined className="service-icon" />,
-              },
-            ]
-        },
-        2: {
-          title: "Home Remodeling",
-          icon: <FaHome className="service-icon" />,
-          color: "#607D8B",
-          services:  [
-              {
-                title: "Retaining Walls",
-                description: "Structural and decorative wall solutions",
-                icon: <FaBorderNone className="service-icon" />, // Alternative icon
-              },
-              {
-                title: "Fencing Services",
-                description: "New installation, repairs, and replacements",
-                icon: <FaBorderNone className="service-icon" />, // Alternative icon
-              },
-              {
-                title: "Power Washing",
-                description: "Exterior cleaning for homes and hardscapes",
-                icon: <FaWater className="service-icon" />,
-              },
-              {
-                title: "Indoor/Outdoor Painting",
-                description: "Professional painting services for all surfaces",
-                icon: <FaPaintRoller className="service-icon" />,
-              },
-              {
-                title: "Additions",
-                description: "Expand your living space with expertly designed home additions.",
-                icon: <FaTools className="service-icon" />,
-              },
-              {
-                title: "Floor Installations",
-                description: "Expert installation of hardwood, tile, and laminate flooring.",
-                icon: <FaHome className="service-icon" />,
-              },
-              {
-                title: "Basement Remodeling",
-                description: "Transform your basement into a functional and beautiful living space.",
-                icon: <FaSprayCan className="service-icon" />,
-              },
-              {
-                title: "Carpet Installations",
-                description: "Professional carpet installation with precise fitting and finishing.",
-                icon: <FaPaintRoller className="service-icon" />,
-              },
-            ]
-        }
-      };
+    1: {
+      title: "Commercial & Residential Grounds Maintenance",
+      icon: <FaLeaf className="service-icon" />,
+      color: "#4CAF50",
+      services: [
+        { title: "Routine Lawn Mowing & Edging", icon: <FaCut /> },
+        { title: "Mulching & Seasonal Cleanups", icon: <FaSeedling /> },
+        { title: "Shrub Trimming & Plant Care", icon: <FaLeaf /> },
+        { title: "Leaf Removal", icon: <FaBroom /> },
+        { title: "Gutter Cleaning", icon: <FaWater /> },
+        { title: "Power Washing & Staining", icon: <FaSprayCan /> },
+        { title: "Weed Control & Bed Maintenance", icon: <FaSeedling /> },
+        { title: "Aeration & Overseeding", icon: <FaLayerGroup /> },
+        { title: "Sod Installation", icon: <FaLeaf /> },
+        { title: "Tree & Branch Trimming", icon: <FaTree /> },
+        { title: "Trash & Debris Removal", icon: <FaTrash /> },
+        { title: "Snow Removal (Seasonal)", icon: <FaSnowplow /> },
+        { title: "Christmas Lighting (Seasonal)", icon: <FaLightbulb /> },
+      ],
+    },
+  
+    2: {
+      title: "Home Repair Services",
+      icon: <FaTools className="service-icon" />,
+      color: "#607D8B",
+      services: [
+        { title: "Interior & Exterior Repairs", icon: <FaHammer /> },
+        { title: "Drywall & Ceiling Repair / Patching", icon: <FaThLarge /> },
+        { title: "Door, Lock & Hardware Installation", icon: <FaDoorOpen /> },
+        { title: "Ceiling Fan & Light Fixture Installation", icon: <FaFan /> },
+        { title: "Appliance Installation (Non-Gas)", icon: <FaTools /> },
+        { title: "Fixture Replacement (Faucets, Toilets, Sinks)", icon: <FaBath /> },
+        { title: "Caulking & Grout Repair", icon: <FaLayerGroup /> },
+        { title: "TV Mounting", icon: <FaTv /> },
+        { title: "Furniture Assembly", icon: <FaCouch /> },
+        { title: "Small Carpentry Repairs", icon: <FaHammer /> },
+        { title: "Pressure Washing", icon: <FaSprayCan /> },
+        { title: "Floor Repairs", icon: <FaHome /> },
+      ],
+    },
+  
+    3: {
+      title: "General Contracting & Remodeling",
+      icon: <FaBuilding className="service-icon" />,
+      color: "#795548",
+      services: [
+        { title: "Kitchen & Bathroom Remodeling", icon: <FaHome /> },
+        { title: "Basement Finishing", icon: <FaLayerGroup /> },
+        { title: "Flooring Installation", icon: <FaHome /> },
+        { title: "Interior & Exterior Painting", icon: <FaPaintRoller /> },
+        { title: "Deck Building & Repair", icon: <FaHammer /> },
+        { title: "Four-Season Rooms", icon: <FaHome /> },
+        { title: "Fence Installation & Repair", icon: <FaBorderAll /> },
+        { title: "Exterior Upgrades & Property Improvements", icon: <FaBuilding /> },
+        { title: "Commercial Renovations", icon: <FaBuilding /> },
+        { title: "Tenant Improvement Projects", icon: <FaProjectDiagram /> },
+        { title: "Project Management & Oversight", icon: <FaProjectDiagram /> },
+      ],
+    },
+  };
   
 
   const service = servicesData[serviceId];

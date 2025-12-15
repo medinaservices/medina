@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import FacebookReviews from "./FacebookReviews"
 
 function Testimonials() {
   const testimonials = [
@@ -39,15 +40,14 @@ function Testimonials() {
             <p className="testimonial-author">- {testimonial.name}</p>
           </div>
         ))}
-             <Link to="https://www.facebook.com/MedinaServicesLLC/reviews" className="facebook-review">
-            <img
-              src="/images/facebook-review.webp"
-    
-              className="face-review-logo"
-            />
-          </Link>
-      </div>
-    </section>
+
+   
+<div>
+</div>
+
+</div>
+<FacebookReviews/>
+   </section>
   );
 }
 

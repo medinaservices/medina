@@ -26,7 +26,16 @@ function Footer() {
           <h3>Contact Us</h3>
           <p>Email: info@medinaservices.us</p>
           <p>Phone: (571) 395-3928</p>
-          <div className="social-icons">
+  
+        </div>
+        <div className="footer-section">
+          <h3>Hours</h3>
+          <p>Monday-Friday: 8am - 6pm</p>
+          <p>Saturday: 9am - 4pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div className="footer-section">
+        <div className="social-icons">
             <a
               href="https://www.facebook.com/MedinaServicesLLC/"
               target="_blank"
@@ -49,28 +58,14 @@ function Footer() {
               <FaGoogle className="social-icon" />
             </a>
           </div>
-        </div>
-        <div className="footer-section">
-          <h3>Hours</h3>
-          <p>Monday-Friday: 8am - 6pm</p>
-          <p>Saturday: 9am - 4pm</p>
-          <p>Sunday: Closed</p>
-        </div>
-        <div className="footer-section">
-          <h3>Service Area</h3>
-          <p>Serving the local community and surrounding areas</p>
-          <p>
-            3544 Finish Line Drive Gainesville, VA 20155
-            <p>Cage Code: 88GC1</p>
-            <p>DUNS No: 080530813</p>
-          </p>
+        <p>
+          &copy; {new Date().getFullYear()} Medina Services LLC <br></br> All rights
+          reserved.
+        </p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>
-          &copy; {new Date().getFullYear()} Medina Services LLC - All rights
-          reserved.
-        </p>
+   
       </div>
     </footer>
   );

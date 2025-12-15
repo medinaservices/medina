@@ -19,20 +19,20 @@ const ServiceCarts = () => {
     {
       id: 1,
       title: "Commercial and Residential Grounds Maintenance",
-      description: "Routine lawn mowing, mulching, shrub trimim: leaf removal, weed control, and more.",
+      description: "Our commercial and residential grounds maintenance services are designed to protect your property, enhance curb appeal, and ensure safety throughout the year. Whether you&#39;re a homeowner, HOA, business owner, or property manager, we tailor our maintenance solutions to meet your unique needs and deliver results you can rely on.",
       icon: <FaLeaf className="service-icon" size={64}/>, 
       color: "#08518a"
     },
     {
       id: 2,
       title: "Home Repair Services",
-      description: "Interior and exterior repairs, including carpentry, painting, drywall, and more.",
+      description: "Tired of unfinished projects piling up? Our professional, reliable home repair team tackles EVERYTHING on your to-do list — big or small. Northern Virginia homeowners trust us for fast service, expert workmanship, and peace of mind. One call. One team. Every repair done right. Medina Services, LLC is Northern Virginia’s go-to home repair service team for fast, dependable results. We specialize in ALL home repairs — so you don’t lift a finger. Book today and get your home back in shape FAST.",
       icon: <FaTools className="service-icon" size={64}/>,
       color: "#08518a"
     }, {
       id: 3,
       title: "General Contracting and Remodeling",
-      description: "Complete home addition's, kitchen and bathroom remodels, and more.",
+      description: "Our licensed and experienced team delivers full-service general contracting and remodeling with professional oversight, quality craftsmanship, and clear communication from start to finish. Whether it’s updating a single room or managing a full property renovation, we bring precision, reliability, and integrity to every project.",
       icon: <FaHome className="service-icon" size={64}/>,
       color: "#08518a"
     }
