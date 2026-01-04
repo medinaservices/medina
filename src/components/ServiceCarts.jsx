@@ -19,7 +19,7 @@ const ServiceCarts = () => {
     {
       id: 1,
       title: "Commercial and Residential Grounds Maintenance",
-      description: "Our commercial and residential grounds maintenance services are designed to protect your property, enhance curb appeal, and ensure safety throughout the year. Whether you&#39;re a homeowner, HOA, business owner, or property manager, we tailor our maintenance solutions to meet your unique needs and deliver results you can rely on.",
+      description: "Our commercial and residential grounds maintenance services are designed to protect your property, enhance curb appeal, and ensure safety throughout the year. Whether you are a homeowner, HOA, business owner, or property manager, we tailor our maintenance solutions to meet your unique needs and deliver results you can rely on.",
       icon: <FaLeaf className="service-icon" size={64}/>, 
       color: "#08518a"
     },
@@ -66,9 +66,8 @@ const ServiceCarts = () => {
               alt="Medina Services Logo"
               className="logo-image2"
             />
-                    <h3 className="section-subtitle">Providing quality landscaping, power
-washing, and exterior services
-since 2016.</h3>
+                    <h3 className="section-subtitle">Providing high-quality landscaping, remodeling, home repair services
+since 2016, with a focus on craftsmanship and customer satisfaction.</h3>
 
    
 
