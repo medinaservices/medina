@@ -66,18 +66,20 @@ const ServiceCarts = () => {
               alt="Medina Services Logo"
               className="logo-image2"
             />
-        <h1 className="item-title">Honest, Reliable, Family-Owned</h1>
-        <h5 className="section-subtitle">Providing quality landscaping, power
+                    <h3 className="section-subtitle">Providing quality landscaping, power
 washing, and exterior services
-since 2016.</h5>
+since 2016.</h3>
+
+   
+
+        </div>
+        <div className="item2">
+        <h1 className="item-title">Honest, Reliable, Family-Owned</h1>
 
 <button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
             Get a Free Estimate
           </button>
-
-        </div>
-        <div className="item2">
-        <img  src="/images/about.jpg"/>
+        {/* <img  src="/images/about.jpg"/> */}
 
         </div>
       </div>
