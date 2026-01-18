@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function QuoteForm({ onClose }) {
-  const [result, setResult] = React.useState("");
+  const [ setResult] = React.useState("");
   const [formData, setFormData] = useState({
     name: '',
     email: '',

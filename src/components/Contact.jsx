@@ -4,7 +4,7 @@ import './Contact.css'; // Create this new CSS file
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
-  const [formData, setFormData] = useState({
+  const [ setFormData] = useState({
     name: '',
     email: '',
     message: ''
