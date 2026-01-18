@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLeaf, FaUsers, FaAward, FaSeedling } from "react-icons/fa";
-import aboutImage from "../assets/about.jpg"; // Add your image
+import aboutImage from "../assets/about-last.jpeg"; // Add your image
 
 const teamData = {};
 function AboutUs() {
