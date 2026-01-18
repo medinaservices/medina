@@ -9,8 +9,6 @@ export default function Contact() {
     email: '',
     message: ''
   });
-
-  const [submitted, setSubmitted] = useState(false);
   
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +48,7 @@ export default function Contact() {
         <div className="contact-info-main">
           <div >
 </div>
-<img className="logo-contact" src="/images/logo.png"/>
+<img className="logo-contact" alt="logo" src="/images/logo.png"/>
 
           <h2>Contact Us</h2>
           <p>Have questions or ready to schedule service? Reach out today!</p>

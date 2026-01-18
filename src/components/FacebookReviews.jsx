@@ -14,6 +14,7 @@ export default function FacebookReviews() {
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            id="1"
           />
         </div>
 
@@ -25,6 +26,7 @@ export default function FacebookReviews() {
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            id="2"
           />
 
           <iframe
@@ -33,6 +35,7 @@ export default function FacebookReviews() {
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            id="3"
           />
       <h3 className="fb-title">More — click the Facebook link below</h3>
 

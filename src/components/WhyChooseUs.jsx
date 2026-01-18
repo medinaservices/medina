@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import QuoteForm from "./QuoteForm";
 import {
   FaHandshake,
@@ -59,10 +59,7 @@ const services = [
 ];
 
 const WhyChooseUs = () => {
-  const { serviceId } = useParams();
   const [showQuoteForm, setShowQuoteForm] = useState(false);
-
-  const service = services[serviceId] || services[0];
 
   return (
     <div className="service-page-container">
