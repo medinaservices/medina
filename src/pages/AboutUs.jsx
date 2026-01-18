@@ -1,7 +1,6 @@
 import React from "react";
 import aboutImage from "../assets/about-last.jpeg"; // Add your image
 
-const teamData = {};
 function AboutUs() {
   return (
     <section className="about-section" id="about">
