@@ -1,113 +1,99 @@
-import React from "react";
-import aboutImage from "../assets/about-last.jpeg"; // Add your image
+import React, { useEffect } from "react";
+import { FaAward, FaHandshake, FaHome, FaUsers } from "react-icons/fa";
+import aboutImage from "../assets/about-last.jpeg";
+
+const pillars = [
+  {
+    title: "Family-Built",
+    description:
+      "Medina Services started as a family venture and still operates with the same level of personal accountability.",
+    icon: <FaUsers />,
+  },
+  {
+    title: "Reliable Service",
+    description:
+      "We show up, communicate clearly, and do the work with the consistency clients expect from a long-term partner.",
+    icon: <FaHandshake />,
+  },
+  {
+    title: "Quality Work",
+    description:
+      "Every repair, maintenance visit, and improvement project is handled with care, craftsmanship, and respect for the property.",
+    icon: <FaAward />,
+  },
+  {
+    title: "Property-Focused",
+    description:
+      "We support both residential and commercial clients across Northern Virginia with practical, dependable solutions.",
+    icon: <FaHome />,
+  },
+];
 
 function AboutUs() {
+  useEffect(() => {
+    document.title = "About Us | Medina Services LLC";
+  }, []);
+
   return (
     <section className="about-section" id="about">
-      <div className="container">
-        <div className="about-content">
-          <div className="about-image">
-            <img src={aboutImage} alt="Our lawn care team working" />
-          </div>
-
-          
-
-          <div className="about-text">
-            <h2>About Medina Services LLC</h2>
-            {/* <p className="about-subtitle">Professional Lawn Care Since 2016</p> */}
-
-            <p>
-            Medina Services was founded in 2016 with a simple promise: to deliver honest, reliable, and
-hardworking service you can feel good about inviting to your home. What began as a small
-family venture between my wife and me has grown into a company built on trust, consistency,
-and genuine care for the people we serve.
-When we started this business, we weren’t just thinking about landscaping—we were thinking
-about building a future for our family. At the time, I was going back to school to pursue my
-business degree, attending classes during the day and learning about ABA therapy in the
-evenings for our oldest son, who has autism. Life was busy and challenging, but it taught us the
-importance of patience, communication, and showing up for the people who rely on you. Those
-same values are the foundation of our company today.
-Every service we offer is guided by the belief that quality work and strong relationships go hand
-in hand. Over the years, we’ve expanded our services with the same goal in mind: to make life
-easier for our clients and to treat their homes with the same care and respect we give our own.
-At Medina Services LLC, we provide dependable, high-quality services that keep properties
-looking their best and operating smoothly. As a trusted local provider in Northern Virginia, we
-specialize in commercial and residential grounds maintenance, home repair and handyman
-services, and general contracting. Our team is committed to delivering reliable solutions
-tailored to the unique needs of every client.
-We’re grateful for every family, homeowner, and business that chooses us. Medina Services
-isn’t just our livelihood—it’s a part of our story, and we look forward to being a reliable part of
-yours too.
-<h4>Thank you for trusting us.</h4>
+      <div className="container about-container">
+        <div className="about-hero">
+          <div className="about-copy">
+            <h3>Built on trust, consistency, and care for the people we serve.</h3>
+            <p className="about-lead">
+              Medina Services LLC was founded in 2016 with a simple promise:
+              deliver honest, reliable, hardworking service that clients feel
+              good about inviting to their homes and properties.
             </p>
-
-            {/* <div className="about-features">
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <FaLeaf />
-                </div>
-                <h3>Eco-Friendly</h3>
-                <p>
-                  We use sustainable practices and organic products whenever
-                  possible
-                </p>
-              </div>
-
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <FaUsers />
-                </div>
-                <h3>Family Owned</h3>
-                <p>Locally owned and operated with personalized service</p>
-              </div>
-
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <FaAward />
-                </div>
-                <h3>Certified</h3>
-                <p>Fully licensed and insured professionals</p>
-              </div>
-
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <FaSeedling />
-                </div>
-                <h3>Seasonal Care</h3>
-                <p>Year-round maintenance programs tailored to your lawn</p>
-              </div>
-            </div> */}
-{/* 
-            <div className="team-section">
-              <h3>Meet Our Team</h3>
-              <div className="team-members">
-                {teamData.map((member) => (
-                  <div className="team-card" key={member.id}>
-                    <img src={member.image} alt={member.name} />
-                    <h4>{member.name}</h4>
-                    <p>{member.position}</p>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            {/* <div className="stats-section">
-              <div className="stat-item">
-                <h4>500+</h4>
-                <p>Happy Clients</p>
-              </div>
-              <div className="stat-item">
-                <h4>10</h4>
-                <p>Years Experience</p>
-              </div>
-              <div className="stat-item">
-                <h4>100%</h4>
-                <p>Satisfaction Guarantee</p>
-              </div>
-            </div> */}
-
-            {/* <button className="cta-button">Meet Our Team</button> */}
+            <div className="about-story">
+              <p>
+                What began as a small family venture between husband and wife
+                grew from a deeper goal than landscaping alone. The business was
+                built while balancing school, family responsibilities, and the
+                day-to-day discipline required to keep showing up for the people
+                who depend on you.
+              </p>
+              <p>
+                That experience shaped the company. Patience, communication,
+                follow-through, and respect for the client are not marketing
+                lines here. They are the operating standards behind every job we
+                take on.
+              </p>
+              <p>
+                Over time, Medina Services expanded to meet more of what clients
+                actually need: commercial and residential grounds maintenance,
+                home repair and handyman services, and general contracting. The
+                goal stayed the same: make life easier for clients and care for
+                their properties the same way we would care for our own.
+              </p>
+              <p>
+                We are grateful to every homeowner, family, business, and
+                property manager who trusts us. Medina Services is part of our
+                story, and we intend to be a reliable part of yours.
+              </p>
+            </div>
+            <p className="about-signoff">Thank you for trusting us.</p>
           </div>
+
+          <div className="about-image-panel">
+            <div className="about-image">
+              <img src={aboutImage} alt="Medina Services team at work" />
+            </div>
+            <div className="about-image-caption">
+              Serving Northern Virginia with dependable maintenance, repairs,
+              and remodeling since 2016.
+            </div>
+          </div>
+        </div>
+
+        <div className="about-pillars">
+          {pillars.map((pillar) => (
+            <div key={pillar.title} className="about-pillar-card">
+              <div className="about-pillar-icon">{pillar.icon}</div>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

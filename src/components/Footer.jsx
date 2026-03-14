@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaFacebook, FaInstagram, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 
-function Footer() {
+function Footer({ onGetQuoteClick }) {
   const [tooltip, setTooltip] = useState("");
 
   return (
@@ -9,14 +9,24 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: info@medinaservices.us</p>
-          <p>Phone: (571) 395-3928</p>
+          <p>Medina Services, LLC</p>
+          <p>
+            <a href="tel:+15713953927" className="phone-link">
+              (571) 395-3927
+            </a>
+          </p>
+          <p>
+            <a href="mailto:info@medinaservices.us" className="phone-link">
+              info@medinaservices.us
+            </a>
+          </p>
+          <p>Gainesville, VA</p>
         </div>
 
         <div className="footer-section">
           <h3>Hours</h3>
-          <p>Monday–Friday: 8am – 6pm</p>
-          <p>Saturday: 9am – 4pm</p>
+          <p>Monday - Friday: 8:00am - 5pm</p>
+          <p>Saturday: 8:30am - 3pm</p>
           <p>Sunday: Closed</p>
         </div>
 
@@ -33,7 +43,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://instagram.com/MedinaServicesLLC"
+              href="https://www.instagram.com/medinaservices.us?igsh=b2E3dXBma3Yyc2xs"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setTooltip("Follow us on Instagram")}
@@ -43,10 +53,20 @@ function Footer() {
             </a>
 
             <a
-              href="https://g.page/MedinaServicesLLC"
+              href="https://www.linkedin.com/company/medinaservicesus/"
               target="_blank"
               rel="noopener noreferrer"
-              onMouseEnter={() => setTooltip("Leave us a Google review")}
+              onMouseEnter={() => setTooltip("Connect with us on LinkedIn")}
+              onMouseLeave={() => setTooltip("")}
+            >
+              <FaLinkedinIn className="social-icon" />
+            </a>
+
+            <a
+              href="https://www.google.com/search?q=Medina+Services+LLC"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => setTooltip("Medina Services LLC - Google Search")}
               onMouseLeave={() => setTooltip("")}
             >
               <FaGoogle className="social-icon" />
@@ -58,6 +78,10 @@ function Footer() {
               {tooltip}
             </div>
           )}
+
+          <button className="top-Quote-button footer-quote-button" onClick={onGetQuoteClick}>
+            Get a Free Estimate
+          </button>
 
           <p>
             &copy; {new Date().getFullYear()} Medina Services LLC <br />

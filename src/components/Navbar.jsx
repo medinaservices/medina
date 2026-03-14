@@ -30,7 +30,9 @@ function Navbar({ onGetQuoteClick }) {
         <div className="container">
           <div className="contact-info">
             <FaPhone className="contact-icon" />
-            <span>(571) 395-3928</span>
+            <a href="tel:+15713953927" className="phone-link">
+              (571) 395-3927
+            </a>
           </div>
           <button className="top-Quote-button" onClick={onGetQuoteClick}>
             Get a Free Estimate
@@ -41,20 +43,20 @@ function Navbar({ onGetQuoteClick }) {
       {/* Main Navigation Bar */}
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="container navbar-container">
-          <Link to="/" className="navbar-logo">
-            <img
-              src="/images/logo.png"
-              alt="Medina Services Logo"
-              className="logo-image"
-            />
-                <span>Medina Services LLC</span>
-          </Link>
-
           <div className="menu-icon" onClick={toggleMenu}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </div>
 
           <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 to="/services"
@@ -76,16 +78,6 @@ function Navbar({ onGetQuoteClick }) {
 
             <li className="nav-item">
               <Link
-                to="/whychooseus"
-                className="nav-link"
-                onClick={() => setIsOpen(false)}
-              >
-              Why Choose Us
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
                 to="/about"
                 className="nav-link"
                 onClick={() => setIsOpen(false)}
@@ -95,11 +87,11 @@ function Navbar({ onGetQuoteClick }) {
             </li>
             <li className="nav-item">
               <Link
-                to="/contact"
+                to="/whychooseus"
                 className="nav-link"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                Why Choose Us
               </Link>
             </li>
           </ul>

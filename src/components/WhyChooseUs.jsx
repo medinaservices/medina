@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import QuoteForm from "./QuoteForm";
 import {
   FaHandshake,
@@ -7,9 +7,43 @@ import {
   FaUserCheck,
   FaCalendarAlt,
   FaDollarSign,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
+  FaHome,
+  FaBuilding
 } from "react-icons/fa";
 import "./ServiceCarts.css";
+
+const highlights = [
+  {
+    title: "Family-Owned & Local",
+    description:
+      "A local team that understands Northern Virginia properties and treats clients like neighbors, not account numbers.",
+    icon: <FaMapMarkerAlt className="service-icon" />,
+  },
+  {
+    title: "Quality Work You Can Count On",
+    description:
+      "Consistent workmanship, clear communication, and follow-through from estimate to completion.",
+    icon: <FaAward className="service-icon" />,
+  },
+  {
+    title: "Honest, Upfront Pricing",
+    description:
+      "Clear scopes and transparent pricing without surprise charges after work begins.",
+    icon: <FaDollarSign className="service-icon" />,
+  },
+  {
+    title: "Residential + Commercial Experience",
+    description:
+      "Built to support homeowners, property managers, HOAs, and commercial clients with the right level of service.",
+    icon: (
+      <div className="why-highlight-icon-pair">
+        <FaHome className="service-icon" />
+        <FaBuilding className="service-icon" />
+      </div>
+    ),
+  },
+];
 
 
 const services = [
@@ -60,48 +94,55 @@ const services = [
 const WhyChooseUs = () => {
   const [showQuoteForm, setShowQuoteForm] = useState(false);
 
+  useEffect(() => {
+    document.title = "Why Choose Us | Medina Services LLC";
+  }, []);
+
   return (
-    <div className="service-page-container">
-<h2>
-Why Choose Us
-</h2>
-<br/>
-<h4>
-Choosing the right company to care for your home or commercial property matters. At Medina
-Services LLC, we set the standard for reliability, professionalism, and quality workmanship.
+    <div className="service-page-container why-choose-page">
+      {showQuoteForm && <QuoteForm onClose={() => setShowQuoteForm(false)} />}
 
-<br/>
+      <div className="why-choose-hero">
+        <h2>Dependable service, clear communication, and workmanship that holds up.</h2>
+        <p className="why-choose-intro">
+          Choosing the right company to care for your home or commercial property matters. Medina Services LLC is built around reliability, professionalism, and quality results across maintenance, repairs, and remodeling.
+        </p>
+      </div>
 
-Here’s what sets us apart:
+      <div className="why-choose-highlights">
+        {highlights.map((item, index) => (
+          <div key={index} className="why-highlight-card">
+            <div className="why-highlight-icon">{item.icon}</div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
 
-</h4>
-      {showQuoteForm && (
-        <QuoteForm onClose={() => setShowQuoteForm(false)} />
-      )}
-
-
-
-      {/* Service Content */}
-      <div className="service-details">
-
-        <div className="services-list">
+      <div className="service-details why-choose-details">
+        <div className="why-choose-section-heading">
+          <h3>What sets us apart</h3>
+          <p>These are the service standards clients can expect on every project.</p>
+        </div>
+        <div className="why-standards-grid">
           {services.map((item, index) => (
-            <div key={index} className="service-item">
-              <div className="service-icon-container">
+            <article key={index} className="why-standard-card">
+              <div className="why-standard-icon">
                 {item.icon}
               </div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
+              <div className="why-standard-copy">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </article>
           ))}
         </div>
 
-        <button
-          className="top-Quote-button"
-          onClick={() => setShowQuoteForm(true)}
-        >
-          Get a Free Estimate
-        </button>
+        <div className="why-choose-cta">
+          <button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
+            Get a Free Estimate
+          </button>
+        </div>
       </div>
     </div>
   );

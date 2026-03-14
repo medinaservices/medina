@@ -56,31 +56,11 @@ const ServiceCarts = () => {
 
       {/* <h2 className="section-title">Our Services</h2> */}
 
-      <div className="logos">
-        <div>
-      
-        </div>
-        <div className="item1">
-        <img
-              src="/images/logo.png"
-              alt="Medina Services Logo"
-              className="logo-image2"
-            />
-                    <h3 className="section-subtitle">Providing high-quality landscaping, remodeling, home repair services
-since 2016, with a focus on craftsmanship and customer satisfaction.</h3>
-
-   
-
-        </div>
-        <div className="item2">
-        <h1 className="item-title">Honest, Reliable, Family-Owned</h1>
-
-<button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
-            Get a Free Estimate
-          </button>
-        {/* <img  src="/images/about.jpg"/> */}
-
-        </div>
+      <div className="services-page-intro">
+        <h3 className="services-page-title">Our Services</h3>
+        <p className="services-page-text">
+          Explore our three core service lines to find the right fit for your property, then open each category for detailed offerings.
+        </p>
       </div>
   
 
@@ -100,6 +80,16 @@ since 2016, with a focus on craftsmanship and customer satisfaction.</h3>
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="services-page-cta">
+        <h2>Need help choosing the right service?</h2>
+        <p>
+          Tell us what you need and we will point you to the right scope of work.
+        </p>
+        <button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
+          Get a Free Estimate
+        </button>
       </div>
     </div>
   );

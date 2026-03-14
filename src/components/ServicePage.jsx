@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import QuoteForm from "./QuoteForm";
 import {
@@ -9,7 +9,6 @@ import {
   FaTree,
   FaTrash,
   FaSnowplow,
-  FaLightbulb,
   FaWater,
   FaSprayCan,
   FaTools,
@@ -29,7 +28,6 @@ import {
   FaChevronDown
 } from "react-icons/fa";
 
-
 import "./ServiceCarts.css";
 
 const ServicePage = () => {
@@ -41,6 +39,8 @@ const ServicePage = () => {
       title: "Commercial & Residential Grounds Maintenance",
       icon: <FaLeaf className="service-icon" />,
       color: "#4CAF50",
+      intro:
+        "Protect your property, improve curb appeal, and keep exterior spaces safe and well-maintained through every season.",
       services: [
         { title: "Routine Lawn Mowing & Edging", icon: <FaCut /> },
         { title: "Mulching & Seasonal Cleanups", icon: <FaSeedling /> },
@@ -54,7 +54,6 @@ const ServicePage = () => {
         { title: "Tree & Branch Trimming", icon: <FaTree /> },
         { title: "Trash & Debris Removal", icon: <FaTrash /> },
         { title: "Snow Removal (Seasonal)", icon: <FaSnowplow /> },
-        { title: "Christmas Lighting (Seasonal)", icon: <FaLightbulb /> },
       ],
     },
   
@@ -62,17 +61,17 @@ const ServicePage = () => {
       title: "Home Repair Services",
       icon: <FaTools className="service-icon" />,
       color: "#607D8B",
+      intro:
+        "Fast, dependable repair support for the work that keeps homes functioning, looking good, and ready for everyday use.",
       services: [
         { title: "Interior & Exterior Repairs", icon: <FaHammer /> },
         { title: "Drywall & Ceiling Repair / Patching", icon: <FaThLarge /> },
-        { title: "Door, Lock & Hardware Installation", icon: <FaDoorOpen /> },
+        { title: "Door, Window and Trim Repair", icon: <FaDoorOpen /> },
         { title: "Ceiling Fan & Light Fixture Installation", icon: <FaFan /> },
-        { title: "Appliance Installation (Non-Gas)", icon: <FaTools /> },
         { title: "Fixture Replacement (Faucets, Toilets, Sinks)", icon: <FaBath /> },
         { title: "Caulking & Grout Repair", icon: <FaLayerGroup /> },
         { title: "TV Mounting", icon: <FaTv /> },
         { title: "Furniture Assembly", icon: <FaCouch /> },
-        { title: "Small Carpentry Repairs", icon: <FaHammer /> },
         { title: "Pressure Washing", icon: <FaSprayCan /> },
         { title: "Floor Repairs", icon: <FaHome /> },
       ],
@@ -82,6 +81,8 @@ const ServicePage = () => {
       title: "General Contracting & Remodeling",
       icon: <FaBuilding className="service-icon" />,
       color: "#795548",
+      intro:
+        "From room updates to broader renovation work, we manage remodeling projects with clear communication and dependable execution.",
       services: [
         { title: "Kitchen & Bathroom Remodeling", icon: <FaHome /> },
         { title: "Basement Finishing", icon: <FaLayerGroup /> },
@@ -89,6 +90,7 @@ const ServicePage = () => {
         { title: "Interior & Exterior Painting", icon: <FaPaintRoller /> },
         { title: "Deck Building & Repair", icon: <FaHammer /> },
         { title: "Four-Season Rooms", icon: <FaHome /> },
+        { title: "Installation of Shelving & Storage", icon: <FaTools /> },
         { title: "Fence Installation & Repair", icon: <FaBorderAll /> },
         { title: "Exterior Upgrades & Property Improvements", icon: <FaBuilding /> },
         { title: "Commercial Renovations", icon: <FaBuilding /> },
@@ -101,13 +103,19 @@ const ServicePage = () => {
 
   const service = servicesData[serviceId];
 
+  useEffect(() => {
+    if (service) {
+      document.title = `${service.title} | Medina Services LLC`;
+    }
+  }, [service]);
+
   if (!service) {
     return <div className="not-found">Service not found</div>;
   }
 
   return (
-    <div className="service-page-container">
-              {showQuoteForm && <QuoteForm onClose={() => setShowQuoteForm(false)} />}
+    <div className="service-page-container service-detail-page">
+      {showQuoteForm && <QuoteForm onClose={() => setShowQuoteForm(false)} />}
 
       <nav className="breadcrumb-nav">
         <ol>
@@ -127,22 +135,42 @@ const ServicePage = () => {
         </ol>
       </nav>
 
-      <div className="service-details">
-        <h2 className="service-title">{service.title}</h2>
-        
-        <div className="services-list">
+      <section className="service-detail-hero" style={{ "--service-color": service.color }}>
+        <div className="service-detail-icon">{service.icon}</div>
+        <div className="service-detail-copy">
+          <p className="service-detail-eyebrow">Service Category</p>
+          <h2 className="service-title">{service.title}</h2>
+          <p className="service-detail-intro">{service.intro}</p>
+        </div>
+      </section>
+
+      <section className="service-detail-body">
+        <div className="service-detail-section-heading">
+          <h3>Included Services</h3>
+          <p>Explore the work we commonly provide within this service category.</p>
+        </div>
+
+        <div className="service-offerings-grid">
           {service.services.map((item, index) => (
-            <div key={index} className="service-item">
-              <div className="service-icon-container">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
+            <article
+              key={index}
+              className="service-offering-card"
+              style={{ "--service-color": service.color }}
+            >
+              <div className="service-offering-icon">{item.icon}</div>
+              <div className="service-offering-copy">
+                <h3>{item.title}</h3>
+              </div>
+            </article>
           ))}
         </div>
-        <button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
+
+        <div className="service-detail-cta">
+          <button className="top-Quote-button" onClick={() => setShowQuoteForm(true)}>
             Get a Free Estimate
           </button>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
