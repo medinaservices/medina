@@ -760,9 +760,9 @@ html {
 }
 
 .top-Quote-button {
-  background:#08518a;
-  color: white;
-  border: 1px solid white;
+  background: #2563a6;
+  color: #ffffff;
+  border: 1px solid #2563a6;
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 1.4rem;
@@ -771,8 +771,39 @@ html {
 }
 
 .top-Quote-button:hover {
-  background: navy;
-  color: white;
+  background: #1b4c80;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .top-contact-bar {
+    padding: 8px 0;
+    font-size: 1.2rem;
+  }
+
+  .top-contact-bar .container {
+    flex-direction: column;
+    gap: 0.45rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    gap: 0.35rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-icon {
+    font-size: 0.7rem;
+  }
+
+  .top-Quote-button {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.58rem 0.85rem;
+    font-size: 0.92rem;
+    border-radius: 10px;
+  }
 }
 
 /* Updated Navbar Styles */
