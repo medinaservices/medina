@@ -1,0 +1,43 @@
+# === Agency internal working files (not for the client repo) ===
+Documents/
+workflow/
+plan/
+prompts/
+.claude/
+design/
+design-refs/
+assets/
+copy/
+backup/
+PRODUCT.md
+
+# === Node / build ===
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.astro/
+.next/
+out/
+*.tsbuildinfo
+
+# === Vercel ===
+.vercel/
+
+# === Env / secrets ===
+.env
+.env.*
+!.env.example
+
+# === IDE / OS ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
